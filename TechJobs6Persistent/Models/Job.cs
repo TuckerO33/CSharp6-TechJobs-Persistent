@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.Extensions.Logging;
 
 namespace TechJobs6Persistent.Models
@@ -6,6 +7,7 @@ namespace TechJobs6Persistent.Models
     public class Job
     {
         public int Id { get; set; }
+        
         public string Name { get; set; }
 
         public Employer Employer { get; set; }

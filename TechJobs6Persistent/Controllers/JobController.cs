@@ -55,8 +55,10 @@ namespace TechJobs6Persistent.Controllers
 
                 return Redirect("Index");
             }
-
-            return View(addJobViewModel);
+            
+            List<Employer> employers = context.Employers.ToList();
+            AddJobViewModel modelReset = new AddJobViewModel(employers);
+            return View(modelReset);
         }
 
         public IActionResult Delete()
